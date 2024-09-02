@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    width: 90vw;
+    height: 20vh;
+    margin-bottom: 3vh;
+    margin-left: 5vw;
+    font-size: 24px;
+    color: gray;
+    border-radius: 4px;
+    border: 2px solid lightgray;
+}
+
+button:first-child{
+    margin-top: 5vh;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.click{
+    background-color: lightblue;
+    color: #355cb2;
+}

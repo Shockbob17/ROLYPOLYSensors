@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Status Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.min.js"></script>
+</head>
+<body>
+    <div id="status"></div>
+    <script>
+        const socket = io();
+        
+        socket.on('status_update', (data) => {
+            if (data.started) {
+                window.location.href = '/track';
+            } else {
+                window.location.href = '/waiting';
+            }
+        });
+        </script>
+</body>
+</html>

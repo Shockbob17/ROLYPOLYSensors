@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tracker</title>
+        <meta charset = 'utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <link rel= 'stylesheet' href='../static/CSS/main.css'>
+    </head>
+<body>
+    <p >Waiting for tracking to start</p>
+    <!-- <button>Button 2</button>
+    <button>Button 3</button>
+    <button>Button 4</button> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.min.js"></script>
+    <script>
+    const socket = io();
+    
+    socket.on('status_update', (data) => {
+        if (data.started) {
+            window.location.href = '/track';
+        }
+    });
+    </script>
+    
+</body>
+</html>
+
